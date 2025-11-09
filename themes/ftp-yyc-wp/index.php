@@ -1,13 +1,442 @@
 <?php
-get_header();
+get_header(); ?>
 
-while (have_posts()) {
-    the_post(); ?>
+  <!-- Hero -->
+  <section class="section section-no-pb section-hero pt-8 lg:pt-12 lg:pb-0">
+    <div class="wrapper">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="hero">
+          We believe the<br />future is bright
+        </h1>
+      </div>
+    </div>
+    <div class="mt-12 lg:mt-16">
+      <img class="img-hero"
+        src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        alt="People shaking hands in community gathering" />
+    </div>
+  </section>
 
-    <h1><?php the_title(); ?></h1>
-    <?php the_content(); ?>
-    <?php }
+  <!-- About -->
+  <section class="section section-about mt-0">
+    <div class="wrapper grid lg:grid-cols-[1fr_500px] gap-12 lg:gap-16 items-center">
+      <div class="max-w-prose">
+        <p class="muted mb-3">About Us</p>
+        <h2
+          class="text-3xl sm:text-4xl lg:text-4xl font-bold tracking-tight text-[var(--color-text)] mb-6 leading-tight">
+          The Unity Community is a volunteer service organization dedicated to enriching our community.
+        </h2>
+        <p class="text-base sm:text-lg text-[var(--color-text)]/70 leading-relaxed">
+          We are a diverse group of professionals, students, and community members who believe in the power of
+          collaboration and shared knowledge. Through our events, workshops, and networking opportunities, we create
+          meaningful connections that help individuals and our community thrive.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="space-y-3">
+          <img class="w-full h-40 sm:h-48 object-cover rounded-xl"
+            src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="Team collaboration" />
+          <img class="w-full h-32 sm:h-36 object-cover rounded-xl"
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="Community meeting" />
+        </div>
+        <div class="mt-10">
+          <img class="w-full h-48 sm:h-56 object-cover rounded-xl"
+            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="Workshop session" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-get_footer();
+  <!-- Events -->
+  <section class="section">
+    <div class="wrapper">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="mb-6 text-3xl sm:text-4xl lg:text-4xl font-bold tracking-tight text-[var(--color-text)]">Upcoming
+          Events
+        </h2>
+        <a href="events.html"
+          class="text-[var(--color-text)] hover:text-[var(--color-text)]/60 transition-colors duration-200 font-medium text-sm flex items-center gap-1">
+          View more
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
 
-?> 
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <!-- Event Card -->
+
+        <article class="bg-white rounded overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+          <div class="flex flex-col sm:flex-row gap-0 sm:gap-3">
+            <figure class="relative isolate overflow-hidden">
+
+              <img
+                class="overflow-hidden w-full sm:w-[240px] h-full sm:h-[260px] object-cover group-hover:scale-105 transition-transform duration-300 shrink-0"
+                src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?q=80&w=1600&auto=format&fit=crop"
+                alt="Tech Workshop" />
+              <div class="absolute left-0 top-2 space-x-2">
+                <span class="bg-[var(--color-red)] text-white text-lg px-2 py-1">Sep 1</span>
+              </div>
+            </figure>
+
+            <div class="p-4 sm:p-6 flex-1">
+              <h3 class="text-xl sm:text-2xl font-semibold text-[var(--color-text)] mb-2">Samahan Sabado September
+                Potluck Picnic</h3>
+              <!-- <p class="text-sm text-[var(--color-text)]/60 uppercase tracking-wide font-medium mb-4">
+                September 1, 2023<br>
+                Unesco Convention
+                Hall · 5:00 PM – 7:30 PM</p> -->
+
+              <div class="group mb-8">
+                <div class="uppercase mb-2 text-[var(--color-text)]/50 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-map-pin-icon lucide-map-pin">
+                    <path
+                      d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span class=" text-[var(--color-red)]"> Prince's Island Park!</span>
+                </div>
+                <div
+                  class="text-[11px] uppercase tracking-[0.18em] text-[var(--color-text)]/50 mb-4 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-calendar-icon lucide-calendar">
+                    <path d="M8 2v4" />
+                    <path d="M16 2v4" />
+                    <rect width="18" height="18" x="3" y="4" rx="2" />
+                    <path d="M3 10h18" />
+                  </svg>
+                  <span class="text-[var(--color-text)]/80">
+                    September 1, 2023 • 2pm to 5pm
+                  </span>
+                </div>
+              </div>
+              <a href="events.html"
+                class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-text)]/70 transition-colors duration-200">
+                Read Details
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-white rounded overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+          <div class="flex flex-col sm:flex-row gap-0 sm:gap-3">
+            <figure class="relative isolate overflow-hidden">
+              <img
+                class="overflow-hidden w-full sm:w-[240px] h-full sm:h-[260px] object-cover group-hover:scale-105 transition-transform duration-300 shrink-0"
+                src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=1600&auto=format&fit=crop"
+                alt="Interview Panel Discussion" />
+              <div class="absolute left-0 top-2  space-x-2">
+                <span class="bg-[var(--color-red)] text-white text-lg px-2 py-1">
+                  Sep 16</span>
+              </div>
+            </figure>
+            <div class="p-4 sm:p-6 flex-1">
+              <h3 class="text-xl sm:text-2xl font-semibold text-[var(--color-text)] mb-2">Interview Panel Discussion
+              </h3>
+
+              <div class="group mb-8">
+                <div class="uppercase mb-2 text-[var(--color-text)]/50 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-map-pin-icon lucide-map-pin">
+                    <path
+                      d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span class=" text-[var(--color-red)]">Calgary Platform</span>
+                </div>
+                <div
+                  class="text-[11px] uppercase tracking-[0.18em] text-[var(--color-text)]/50 mb-4 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-calendar-icon lucide-calendar">
+                    <path d="M8 2v4" />
+                    <path d="M16 2v4" />
+                    <rect width="18" height="18" x="3" y="4" rx="2" />
+                    <path d="M3 10h18" />
+                  </svg>
+                  <span class="text-[var(--color-text)]/80">
+                    September 16, 2025 • 1pm to 5pm
+                  </span>
+                </div>
+              </div>
+              <a href="events.html"
+                class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-text)]/70 transition-colors duration-200">
+                Read Details
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </article>
+
+        <article class="bg-white rounded overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+          <div class="flex flex-col sm:flex-row gap-0 sm:gap-3">
+            <figure class="relative isolate overflow-hidden">
+              <img
+                class="overflow-hidden w-full sm:w-[240px] h-full sm:h-[260px] object-cover group-hover:scale-105 transition-transform duration-300 shrink-0"
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop"
+                alt="Interview Panel Discussion" />
+              <div class="absolute left-0 top-2  space-x-2">
+                <span class="bg-[var(--color-red)] text-white text-lg px-2 py-1">Nov 31</span>
+              </div>
+            </figure>
+            <div class="p-4 sm:p-6 flex-1">
+              <h3 class="text-xl sm:text-2xl font-semibold text-[var(--color-text)] mb-2">Interview Panel Discussion
+              </h3>
+              <div class="group mb-8">
+                <div class="uppercase mb-2 text-[var(--color-text)]/50 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-map-pin-icon lucide-map-pin">
+                    <path
+                      d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span class=" text-[var(--color-red)]"> Calgary Platform</span>
+                </div>
+                <div
+                  class="text-[11px] uppercase tracking-[0.18em] text-[var(--color-text)]/50 mb-4 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-calendar-icon lucide-calendar">
+                    <path d="M8 2v4" />
+                    <path d="M16 2v4" />
+                    <rect width="18" height="18" x="3" y="4" rx="2" />
+                    <path d="M3 10h18" />
+                  </svg>
+                  <span class="text-[var(--color-text)]/80">
+                    November 31, 2022 • 2pm to 5pm
+                  </span>
+                </div>
+              </div>
+              <a href="#"
+                class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-text)]/70 transition-colors duration-200">
+                Read Details
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </article>
+
+        <article class="bg-white rounded overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+          <div class="flex flex-col sm:flex-row gap-0 sm:gap-3">
+            <figure class="relative isolate overflow-hidden">
+              <img
+                class="overflow-hidden w-full sm:w-[240px] h-full sm:h-[260px] object-cover group-hover:scale-105 transition-transform duration-300 shrink-0"
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600&auto=format&fit=crop"
+                alt="Interview Panel Discussion" />
+              <div class="absolute left-0 top-2  space-x-2">
+                <span class="bg-[var(--color-red)] text-white text-lg px-2 py-1">Dec 10</span>
+              </div>
+            </figure>
+            <div class="p-4 sm:p-6 flex-1">
+              <h3 class="text-xl sm:text-2xl font-semibold text-[var(--color-text)] mb-2">Interview Panel Discussion
+              </h3>
+              <div class="group mb-8">
+                <div class="uppercase mb-2 text-[var(--color-text)]/50 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-map-pin-icon lucide-map-pin">
+                    <path
+                      d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span class=" text-[var(--color-red)]"> Calgary Platform</span>
+                </div>
+                <div
+                  class="text-[11px] uppercase tracking-[0.18em] text-[var(--color-text)]/50 mb-4 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-calendar-icon lucide-calendar">
+                    <path d="M8 2v4" />
+                    <path d="M16 2v4" />
+                    <rect width="18" height="18" x="3" y="4" rx="2" />
+                    <path d="M3 10h18" />
+                  </svg>
+                  <span class="text-[var(--color-text)]/80">
+                    November 31, 2022 • 2pm to 5pm
+                  </span>
+                </div>
+              </div>
+              <a href="#"
+                class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-text)]/70 transition-colors duration-200">
+                Read Details
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="section mb-12 md:mb-0">
+    <div class="wrapper">
+      <div class="relative overflow-hidden rounded-2xl min-h-[500px] lg:min-h-[600px]">
+        <img class="absolute inset-0 w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+          alt="Community gathering" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        <div class="relative z-10 flex items-center min-h-[500px] lg:min-h-[600px]">
+          <div class="px-8 py-12 sm:px-12 lg:px-16 max-w-4xl">
+            <h2
+              class="text-white text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight mb-6">
+              One Community, Shared Dreams
+            </h2>
+            <p class="text-white/90 text-lg sm:text-xl max-w-2xl mb-8 leading-relaxed">
+              At Bayanihan, we bring Filipino heart and heritage to Calgary's vibrant tech scene. More than a
+              community—we're a family fostering growth, leadership, and the collective wisdom of strengthening our
+              roots. Take action to create purpose, collaborate with fellow newcomers, celebrate our culture, and help
+              strengthen our bond through open doors, uplift spirits, and build bridges.
+            </p>
+            <a href="#"
+              class="inline-flex items-center gap-2 bg-[var(--color-yellow)] text-[var(--color-black)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[--color-yellow]/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--color-yellow)] focus:ring-offset-2">
+              Join FTP
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insights -->
+  <section class="section bg-[var(--color-green)] pb-12 md:mb-0">
+    <div class="wrapper">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl sm:text-4xl lg:text-4xl font-bold tracking-tight text-[var(--color-text)]">Insights</h2>
+        <a href="#"
+          class="text-[var(--color-text)] hover:text-[var(--color-text)]/70 transition-colors duration-200 font-medium text-sm flex items-center gap-1">
+          Latest Articles
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <article
+          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+          <img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Member Spotlight" />
+          <div class="p-6">
+            <h3 class="text-xl sm:text-2xl font-semibold text-[var(--color-text)] mb-3">Member Spotlight: John Doe</h3>
+            <p class="text-base text-[var(--color-text)]/70 leading-relaxed mb-4">Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#"
+              class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-text)]/70 transition-colors duration-200">
+              Read Details
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article
+          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+          <img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Tech Job Guide" />
+          <div class="p-6">
+            <h3 class="text-xl sm:text-2xl font-semibold text-[var(--color-text)] mb-3">How to Land a Tech Job in
+              Calgary, Alberta</h3>
+            <p class="text-base text-[var(--color-text)]/70 leading-relaxed mb-4">Practical steps for newcomers and
+              students breaking into the YYC tech scene.</p>
+            <a href="#"
+              class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-text)]/70 transition-colors duration-200">
+              Read Details
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article
+          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
+          <img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="React AWS Guide" />
+          <div class="p-6">
+            <h3 class="text-xl sm:text-2xl font-semibold text-[var(--color-text)] mb-3">Quick Guide: Deploying a React
+              App on AWS</h3>
+            <p class="text-base text-[var(--color-text)]/70 leading-relaxed mb-4">Learn the basics of hosting a
+              production build with S3 + CloudFront.</p>
+            <a href="#"
+              class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-text)]/70 transition-colors duration-200">
+              Read Details
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect band -->
+  <section class="section footer-band pb-12 md:mb-0">
+    <div class="wrapper grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-white text-2xl sm:text-3xl font-bold mb-3">Let's Connect</h2>
+        <p class="text-white/80 mb-6">Become part of our Bayanihan family.</p>
+        <div class="flex gap-4">
+          <!-- <a class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200"
+            href="#" aria-label="Instagram">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.244c-.875.807-2.026 1.297-3.323 1.297zm7.83-9.781c-.315 0-.595-.122-.807-.315-.21-.21-.315-.49-.315-.807s.105-.595.315-.807c.21-.21.49-.315.807-.315s.595.105.807.315c.21.21.315.49.315.807s-.105.595-.315.807c-.21.193-.49.315-.807.315z" />
+            </svg>
+          </a> -->
+          <a class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200"
+            href="#" aria-label="Facebook">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+          <a class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200"
+            href="#" aria-label="LinkedIn">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <form class="grid sm:grid-cols-[1fr_auto] gap-3">
+        <input
+          class="w-full px-4 py-3 rounded-full border border-white/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
+          type="email" placeholder="Enter your email address" />
+        <button
+          class="inline-flex items-center gap-2 bg-[var(--color-yellow)] text-[var(--color-black)] px-6 py-3 rounded-full font-semibold transition-all duration-200 hover:bg-[var(--color-yellow)]/90 focus:outline-none focus:ring-2 focus:ring-[var(--color-yellow)] focus:ring-offset-2 justify-center"
+          type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+  
+<?php  get_footer(); ?> 
